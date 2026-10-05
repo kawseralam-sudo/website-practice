@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Gadget Pulse</title>
+    <!-- মূল স্টাইলশিট লিংক -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome আইকন 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Gadget<span>Pulse</span></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">Deals</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="#"><i class="fa-regular fa-heart"></i><span class="badge">0</span></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="badge" id="cart-count">2</span></a>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB BANNER -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h2>Checkout Process</h2>
+            <p><a href="index.html">Home</a> / <a href="cart.html">Cart</a> / <span>Checkout</span></p>
+        </div>
+    </section>
+
+    <!-- CHECKOUT CONTAINER -->
+    <section class="checkout-section">
+        <div class="checkout-container">
+            
+            <!-- বাম পাশ: বিলিং ও শিপিং ইনফরমেশন ফর্ম -->
+            <form id="checkout-form" class="checkout-form" onsubmit="handleOrderSubmit(event)">
+                
+                <div class="form-section">
+                    <h3><i class="fa-solid fa-truck-fast"></i> Shipping & Billing Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname">First Name *</label>
+                            <input type="text" id="fname" required placeholder="Ex: Kawsar">
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name *</label>
+                            <input type="text" id="lname" required placeholder="Ex: Ahmed">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="017XXXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="example@gmail.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="district">District / Division *</label>
+                        <select id="district" required>
+                            <option value="">Select Location</option>
+                            <option value="dhaka">Inside Dhaka (৳৬০ Shipping)</option>
+                            <option value="outside">Outside Dhaka (৳১২০ Shipping)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Full Delivery Address *</label>
+                        <textarea id="address" rows="3" required placeholder="House/Road Number, Area, Thana..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Order Notes (Optional)</label>
+                        <textarea id="notes" rows="2" placeholder="Special instructions for delivery..."></textarea>
+                    </div>
+                </div>
+
+                <!-- পেমেন্ট মেথড সেকশন -->
+                <div class="form-section">
+                    <h3><i class="fa-solid fa-credit-card"></i> Payment Method</h3>
+                    
+                    <div class="payment-options">
+                        <label class="payment-card active">
+                            <input type="radio" name="payment" value="cod" checked onclick="selectPayment(this)">
+                            <div class="payment-info">
+                                <strong>Cash on Delivery</strong>
+                                <small>Pay with cash upon receiving your order</small>
+                            </div>
+                        </label>
+
+                        <label class="payment-card">
+                            <input type="radio" name="payment" value="bkash" onclick="selectPayment(this)">
+                            <div class="payment-info">
+                                <strong>bKash / Nagad Mobile Banking</strong>
+                                <small>Pay instantly via mobile wallet</small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+            </form>
+
+            <!-- ডান পাশ: অর্ডার সামারি ও প্লেস অর্ডার বাটন -->
+            <div class="order-summary-card">
+                <h3>Your Order</h3>
+                
+                <div class="summary-items">
+                    <div class="summary-item">
+                        <span>Wireless ANC Earbuds Pro x 1</span>
+                        <strong>৳২,৪০০</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Over-Ear Gaming Headset x 1</span>
+                        <strong>৳৩,৫০০</strong>
+                    </div>
+                </div>
+
+                <hr class="summary-divider">
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>৳৫,৯০০</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping Fee</span>
+                    <span>৳১২০</span>
+                </div>
+                
+                <hr class="summary-divider">
+
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span>৳৬,০২০</span>
+                </div>
+
+                <!-- ফর্ম সাবমিট বাটন -->
+                <button type="submit" form="checkout-form" class="btn btn-primary place-order-btn">
+                    Place Order Now <i class="fa-solid fa-circle-check"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 GadgetPulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

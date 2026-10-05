@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Gadget Pulse</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Gadget<span>Pulse</span></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">Deals</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="#"><i class="fa-regular fa-heart"></i><span class="badge">0</span></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="badge" id="cart-count">2</span></a>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB BANNER -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h2>Your Shopping Cart</h2>
+            <p><a href="index.html">Home</a> / <span>Cart</span></p>
+        </div>
+    </section>
+
+    <!-- CART CONTAINER -->
+    <section class="cart-section">
+        <div class="cart-container">
+            
+            <!-- বাম পাশের প্রডাক্ট লিস্ট টেবিল -->
+            <div class="cart-table-wrapper">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- প্রোডাক্ট ১ -->
+                        <tr>
+                            <td class="product-info-col">
+                                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=200&q=80" alt="Earbuds">
+                                <div>
+                                    <h4>Wireless ANC Earbuds Pro</h4>
+                                    <small>Color: Black</small>
+                                </div>
+                            </td>
+                            <td>৳২,৪০০</td>
+                            <td>
+                                <div class="quantity-picker">
+                                    <button onclick="updateCartQty(this, -1)">-</button>
+                                    <input type="number" value="1" min="1" readonly>
+                                    <button onclick="updateCartQty(this, 1)">+</button>
+                                </div>
+                            </td>
+                            <td class="item-subtotal">৳২,৪০০</td>
+                            <td><button class="remove-btn" onclick="removeCartItem(this)"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+
+                        <!-- প্রোডাক্ট ২ -->
+                        <tr>
+                            <td class="product-info-col">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=200&q=80" alt="Headphone">
+                                <div>
+                                    <h4>Over-Ear Gaming Headset</h4>
+                                    <small>Color: Blue</small>
+                                </div>
+                            </td>
+                            <td>৳৩,৫০০</td>
+                            <td>
+                                <div class="quantity-picker">
+                                    <button onclick="updateCartQty(this, -1)">-</button>
+                                    <input type="number" value="1" min="1" readonly>
+                                    <button onclick="updateCartQty(this, 1)">+</button>
+                                </div>
+                            </td>
+                            <td class="item-subtotal">৳৩,৫০০</td>
+                            <td><button class="remove-btn" onclick="removeCartItem(this)"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- কুপন কোড ও আপডেট বাটন -->
+                <div class="cart-actions">
+                    <div class="coupon-box">
+                        <input type="text" placeholder="Coupon Code (e.g. GADGET10)">
+                        <button class="btn btn-secondary">Apply Coupon</button>
+                    </div>
+                    <a href="shop.html" class="btn btn-outline">Continue Shopping</a>
+                </div>
+            </div>
+
+            <!-- ডান পাশের কার্ট সামারি -->
+            <div class="cart-summary-card">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">৳৫,৯০০</span>
+                </div>
+                <div class="summary-row">
+                    <span>Estimated Shipping</span>
+                    <span>৳১২০</span>
+                </div>
+                <div class="summary-row">
+                    <span>Discount</span>
+                    <span class="discount-text">-৳০</span>
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-row total-row">
+                    <span>Total Amount</span>
+                    <span id="summary-total">৳৬,০২০</span>
+                </div>
+
+                <a href="checkout.html" class="btn btn-primary checkout-btn">
+                    Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 GadgetPulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

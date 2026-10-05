@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Gadget Pulse</title>
+    <!-- মূল স্টাইলশিট লিংক -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome আইকন 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
+    <header class="navbar">
+        <div class="logo">Gadget<span>Pulse</span></div>
+        
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">Deals</a>
+            <a href="#">About</a>
+        </nav>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for gadgets...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="nav-icons">
+            <a href="#"><i class="fa-regular fa-heart"></i><span class="badge">0</span></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="badge" id="cart-count">0</span></a>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         BREADCRUMB
+         ========================================== -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <p><a href="index.html">Home</a> / <a href="shop.html">Shop</a> / <span>Wireless ANC Earbuds</span></p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PRODUCT DETAILS MAIN CONTAINER
+         ========================================== -->
+    <section class="product-details-container">
+        
+        <!-- বাম পাশের ইমেজ গ্যালারি -->
+        <div class="product-gallery">
+            <div class="main-image">
+                <img id="featured-image" src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80" alt="ANC Earbuds Main">
+            </div>
+            <div class="thumbnail-list">
+                <img class="thumbnail active" src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=300&q=80" onclick="changeImage(this.src)">
+                <img class="thumbnail" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" onclick="changeImage(this.src)">
+                <img class="thumbnail" src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=300&q=80" onclick="changeImage(this.src)">
+            </div>
+        </div>
+
+        <!-- ডান পাশের প্রডাক্ট ইনফরমেশন -->
+        <div class="product-info-box">
+            <span class="stock-status"><i class="fa-solid fa-circle-check"></i> In Stock</span>
+            <h2>Wireless Active Noise Cancelling Earbuds Pro</h2>
+            
+            <div class="rating-review">
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>(4.8)</span>
+                </div>
+                <span class="review-count">| 42 Customer Reviews</span>
+            </div>
+
+            <div class="price-box">
+                <span class="current-price">৳২,৪০০</span>
+                <span class="old-price">৳৩,০০০</span>
+                <span class="save-tag">Save ৳৬০০</span>
+            </div>
+
+            <p class="short-desc">
+                Immerse yourself in crystal-clear sound with advanced Active Noise Cancellation (ANC), 30 hours total battery life, and ultra-fast Type-C charging.
+            </p>
+
+            <!-- কালার অপশন -->
+            <div class="option-group">
+                <label>Select Color:</label>
+                <div class="color-options">
+                    <span class="color-btn active" style="background: #000;" title="Black" onclick="selectColor(this)"></span>
+                    <span class="color-btn" style="background: #fff; border: 1px solid #ddd;" title="White" onclick="selectColor(this)"></span>
+                    <span class="color-btn" style="background: #1f2430;" title="Navy Blue" onclick="selectColor(this)"></span>
+                </div>
+            </div>
+
+            <!-- পরিমাণ (Quantity) ও বাটন -->
+            <div class="action-group">
+                <div class="quantity-picker">
+                    <button onclick="changeQty(-1)">-</button>
+                    <input type="number" id="item-qty" value="1" min="1" readonly>
+                    <button onclick="changeQty(1)">+</button>
+                </div>
+                <button class="btn btn-primary" onclick="addToCart('Wireless ANC Earbuds Pro')">
+                    <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                </button>
+                <button class="btn btn-secondary">Buy Now</button>
+            </div>
+
+            <div class="meta-info">
+                <p><strong>SKU:</strong> GAD-EAR-2026</p>
+                <p><strong>Category:</strong> Audio & Earphones</p>
+                <p><strong>Warranty:</strong> 6 Months Replacement Guarantee</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         DESCRIPTION / SPEC / REVIEWS TABS
+         ========================================== -->
+    <section class="product-tabs-section">
+        <div class="tab-header">
+            <button class="tab-btn active" onclick="openTab(event, 'desc-tab')">Description</button>
+            <button class="tab-btn" onclick="openTab(event, 'spec-tab')">Specifications</button>
+            <button class="tab-btn" onclick="openTab(event, 'reviews-tab')">Reviews (42)</button>
+        </div>
+
+        <div class="tab-content">
+            <!-- বিবরণ ট্যাব -->
+            <div id="desc-tab" class="tab-pane active">
+                <h3>Product Overview</h3>
+                <p>Designed for audiophiles and daily commuters, these Wireless ANC Earbuds offer unmatched sound clarity with deep bass and high-definition treble. Seamless Bluetooth 5.3 connectivity ensures uninterrupted music streaming and crystal-clear calls.</p>
+            </div>
+
+            <!-- স্পেসিফিকেশন ট্যাব -->
+            <div id="spec-tab" class="tab-pane">
+                <table class="spec-table">
+                    <tr><th>Bluetooth Version</th><td>v5.3</td></tr>
+                    <tr><th>Noise Cancellation</th><td>Active Noise Cancellation (up to 30dB)</td></tr>
+                    <tr><th>Battery Backup</th><td>6 Hours (Earbuds) + 24 Hours (Charging Case)</td></tr>
+                    <tr><th>Water Resistance</th><td>IPX5 Sweat & Water Resistant</td></tr>
+                </table>
+            </div>
+
+            <!-- কাস্টমার রিভিউ ট্যাব -->
+            <div id="reviews-tab" class="tab-pane">
+                <div class="review-item">
+                    <div class="reviewer-info">
+                        <strong>Rahim Ahmed</strong>
+                        <span class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p>Awesome product! Sound quality and ANC performance are top-notch for this price range.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 GadgetPulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

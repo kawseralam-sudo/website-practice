@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget Pulse - Modern Tech Store</title>
+    <!-- CSS ফাইল লিংক -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome আইকন লাইব্রেরি লিংক (সার্চ, কার্ট ও স্টার আইকনের জন্য) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         STEP 1 (PART 1): PREMIUM NAVBAR
+         (উপরের লোগো, মেনু, সার্চ বার ও আইকনসমূহ)
+         ========================================== -->
+    <header class="navbar">
+        <!-- ওয়েবসাইট লোগো -->
+        <div class="logo">ShopNex<span>BD</span></div>
+        
+        <!-- নেভিগেশন লিংকসমূহ -->
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <!-- সঠিক লিংক -->
+            <a href="shop.html">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">Deals</a>
+            <a href="#">About</a>
+        </nav>
+
+        <!-- প্রমিনেন্ট সার্চ বক্স -->
+        <div class="search-box">
+            <input type="text" placeholder="Search for gadgets, accessories & more...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <!-- ডানের ইউজার আইকনসমূহ (উইশলিস্ট, কার্ট, অ্যাকাউন্ট) -->
+        <div class="nav-icons">
+            <a href="#"><i class="fa-regular fa-heart"></i><span class="badge">0</span></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i><span class="badge" id="cart-count">0</span></a>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         STEP 1 (PART 2): FUTURISTIC HERO SECTION
+         (হোমপেজের মূল বিশাল ব্যানার)
+         ========================================== -->
+    <section class="hero">
+        <!-- বাম পাশের টেক্সট ও কল-টু-অ্যাকশন বাটন -->
+        <div class="hero-content">
+            <span class="tag">Next-Gen Electronics</span>
+            <h1>Upgrade Your <span>Everyday Tech</span></h1>
+            <p>Discover the latest high-tech gadgets, smart accessories, and premium audio gear designed for your ultimate digital lifestyle.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-secondary">Explore Gadgets</a>
+            </div>
+        </div>
+
+        <!-- ডান পাশের ফিউচারিস্টিক প্রডাক্টের ছবি ও ব্যাকগ্রাউন্ড গ্লো -->
+        <div class="hero-image">
+            <div class="glow-effect"></div>
+            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80" alt="Futuristic Headphones">
+        </div>
+    </section>
+
+    <!-- ==========================================
+         STEP 2: FEATURED CATEGORIES SECTION
+         (গোল গোল ক্যাটাগরি কার্ডসমূহ)
+         ========================================== -->
+    <section class="categories-section">
+        <!-- সেকশনের শিরোনাম -->
+        <div class="section-header">
+            <h2>Explore <span>Categories</span></h2>
+            <p>Find what you need by browsing our top tech categories</p>
+        </div>
+
+        <!-- ক্যাটাগরি কার্ডের গ্রিড -->
+        <div class="category-grid">
+            
+            <!-- ক্যাটাগরি ১: Mobile & Accessories -->
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80" alt="Mobile">
+                </div>
+                <h3>Mobile Accessories</h3>
+            </div>
+
+            <!-- ক্যাটাগরি ২: Audio -->
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=300&q=80" alt="Audio">
+                </div>
+                <h3>Audio Gear</h3>
+            </div>
+
+            <!-- ক্যাটাগরি ৩: Computer & Laptop -->
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=300&q=80" alt="Computers">
+                </div>
+                <h3>Computers & PC</h3>
+            </div>
+
+            <!-- ক্যাটাগরি ৪: Gaming -->
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=300&q=80" alt="Gaming">
+                </div>
+                <h3>Gaming Zone</h3>
+            </div>
+
+            <!-- ক্যাটাগরি ৫: Smart Home & Wearable -->
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=300&q=80" alt="Smart Home">
+                </div>
+                <h3>Smart Watches</h3>
+            </div>
+
+            <!-- ক্যাটাগরি ৬: Daily Tech -->
+            <div class="category-card">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=300&q=80" alt="Daily Tech">
+                </div>
+                <h3>Daily Tech</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         STEP 3: TRENDING PRODUCTS / DEALS SECTION
+         (হট সেল ও ডিসকাউন্ট প্রডাক্ট কার্ড)
+         ========================================== -->
+    <section class="products-section">
+        <!-- সেকশনের শিরোনাম -->
+        <div class="section-header">
+            <h2>Trending <span>Gadgets</span></h2>
+            <p>Check out our best-selling deals with exclusive prices</p>
+        </div>
+
+        <!-- প্রডাক্ট কার্ডের গ্রিড -->
+        <div class="product-grid">
+
+            <!-- প্রডাক্ট ১ -->
+            <div class="product-card">
+                <span class="badge-discount">-20% OFF</span>
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=500&q=80" alt="TWS Earbuds">
+                </div>
+                <div class="product-details">
+                    <span class="product-cat">Audio</span>
+                    <h4>Wireless ANC Noise Cancelling Earbuds</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(4.8)</span>
+                    </div>
+                    <div class="product-bottom">
+                        <div class="price">
+                            <span class="current-price">৳২,৪০০</span>
+                            <span class="old-price">৳৩,০০০</span>
+                        </div>
+                        <button class="add-cart-btn" onclick="addToCart('Wireless ANC Earbuds')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- প্রডাক্ট ২ -->
+            <div class="product-card">
+                <span class="badge-discount">-15% OFF</span>
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=80" alt="Smart Watch">
+                </div>
+                <div class="product-details">
+                    <span class="product-cat">Smart Home</span>
+                    <h4>Ultra Series 9 Smart Watch with AMOLED Display</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <div class="product-bottom">
+                        <div class="price">
+                            <span class="current-price">৳৩,৮৫০</span>
+                            <span class="old-price">৳৪,৫০০</span>
+                        </div>
+                        <button class="add-cart-btn" onclick="addToCart('Ultra Series 9 Smart Watch')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- প্রডাক্ট ৩ -->
+            <div class="product-card">
+                <span class="badge-discount">-10% OFF</span>
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=500&q=80" alt="Gaming Controller">
+                </div>
+                <div class="product-details">
+                    <span class="product-cat">Gaming</span>
+                    <h4>RGB Wireless Bluetooth Gaming Controller</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>(4.2)</span>
+                    </div>
+                    <div class="product-bottom">
+                        <div class="price">
+                            <span class="current-price">৳১,৯৫০</span>
+                            <span class="old-price">৳২,২০০</span>
+                        </div>
+                        <button class="add-cart-btn" onclick="addToCart('RGB Gaming Controller')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- প্রডাক্ট ৪ -->
+            <div class="product-card">
+                <span class="badge-discount">-25% OFF</span>
+                <div class="product-thumb">
+                    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=500&q=80" alt="Keyboard">
+                </div>
+                <div class="product-details">
+                    <span class="product-cat">Computer</span>
+                    <h4>RGB Mechanical Keyboard - Blue Switch</h4>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(4.9)</span>
+                    </div>
+                    <div class="product-bottom">
+                        <div class="price">
+                            <span class="current-price">৳২,৯ce০</span>
+                            <span class="old-price">৳৪,০০০</span>
+                        </div>
+                        <button class="add-cart-btn" onclick="addToCart('RGB Mechanical Keyboard')">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ==========================================
+         STEP 4 (PART 1): TRUST ELEMENTS SECTION
+         (ফ্রি ডেলিভারি, মানি-ব্যাক ও পেমেন্ট সেফটি ব্যাজ)
+         ========================================== -->
+    <section class="trust-section">
+        <div class="trust-container">
+            
+            <!-- ব্যাজ ১: ফ্রি ডেলিভারি -->
+            <div class="trust-box">
+                <div class="trust-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>Free & Fast Shipping</h4>
+                    <p>Free delivery on all orders over ৳5,000</p>
+                </div>
+            </div>
+
+            <!-- ব্যাজ ২: রিফান্ড Policy -->
+            <div class="trust-box">
+                <div class="trust-icon">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>7 Days Return</h4>
+                    <p>Hassle-free 7 days replacement guarantee</p>
+                </div>
+            </div>
+
+            <!-- ব্যাজ ৩: সিকিউর পেমেন্ট -->
+            <div class="trust-box">
+                <div class="trust-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>100% Secure Payment</h4>
+                    <p>Bkash, Nagad, Visa & Mastercard supported</p>
+                </div>
+            </div>
+
+            <!-- ব্যাজ ৪: কাস্টমার সাপোর্ট -->
+            <div class="trust-box">
+                <div class="trust-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="trust-text">
+                    <h4>24/7 Dedicated Support</h4>
+                    <p>Friendly customer care whenever you need</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         STEP 4 (PART 2): FOOTER SECTION
+         (ওয়েবসাইটের নিচের দিকের বিস্তারিত লিংক ও সোশ্যাল মিডিয়া)
+         ========================================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <!-- কলাম ১: লোগো ও সংক্ষিপ্ত তথ্য -->
+            <div class="footer-col">
+                <div class="logo">Gadget<span>Pulse</span></div>
+                <p>Your one-stop destination for the latest premium electronic gadgets, accessories, and futuristic tech gear.</p>
+                <!-- সোশ্যাল মিডিয়া আইকন -->
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- কলাম ২: কুইক লিংক -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Shop All Products</a></li>
+                    <li><a href="#">Trending Deals</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- কলাম ৩: কাস্টমার কেয়ার -->
+            <div class="footer-col">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Return & Refund Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- কলাম ৪: নিউজলেটার (ইমেইল সাবস্ক্রাইব) -->
+            <div class="footer-col">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to get exclusive discounts, launch alerts, and tech updates!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); subscribeNewsletter();">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- ফুটারের কপিরাইট সেকশন -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 GadgetPulse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- জাভাস্ক্রিপ্ট ফাইল লিংক -->
+    <script src="script.js"></script>
+</body>
+</html>
